@@ -90,8 +90,8 @@ export async function POST(request) {
     if (dir) await rm(dir, { recursive: true, force: true }).catch(() => {});
   }
 
-  const information = scoreInformation({ rows, sources, claims });
-  const prompt = stillPrompt(rows);
+  const information = scoreInformation({ rows, sources, claims, note });
+  const prompt = stillPrompt(rows, note);
   const still = await kreaStill(prompt).catch((error) => ({
     url: null,
     prompt,

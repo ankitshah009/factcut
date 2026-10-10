@@ -3,6 +3,8 @@ node_modules
 .env
 .env.local
 .env*.local
+.krea-session.json
+.krea-session.json.tmp
 public/cuts
 *.log
 .DS_Store
